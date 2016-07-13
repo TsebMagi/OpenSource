@@ -11,6 +11,9 @@ import android.view.MenuItem;
 
 public class PolyhedrollActivity extends AppCompatActivity {
 
+    public int numDice;
+    public int diceSides;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,5 +43,9 @@ public class PolyhedrollActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void rollDice(View view){
+        int diceResult;
     }
 }
