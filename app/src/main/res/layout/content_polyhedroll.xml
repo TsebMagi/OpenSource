@@ -14,25 +14,28 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/diceOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
     <LinearLayout
-
+        android:id="@+id/columnOne"
         android:layout_weight="1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/d4_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/d4_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -40,12 +43,14 @@
             />
 
         <TextView
+            android:id="@+id/d4_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="D4"
             />
         <Button
+            android:id="@+id/d4_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -59,6 +64,7 @@
 
 
     <LinearLayout
+        android:id="@+id/d6_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -66,6 +72,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/d6_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -74,12 +81,14 @@
 
 
         <TextView
+            android:id="@+id/d6_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="D6"
             />
         <Button
+            android:id="@+id/d6_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -93,6 +102,7 @@
 
 
     <LinearLayout
+        android:id="@+id/d8_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -100,6 +110,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/d8_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -108,12 +119,14 @@
 
 
         <TextView
+            android:id="@+id/d8_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="D8"
             />
         <Button
+            android:id="@+id/d8_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -126,12 +139,14 @@
 
 
     <LinearLayout
+        android:id="@+id/columnTwo"
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/d10_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -139,6 +154,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/d10_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -147,12 +163,14 @@
 
 
         <TextView
+            android:id="@+id/d10_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="D10"
             />
         <Button
+            android:id="@+id/d10_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -165,6 +183,7 @@
 
 
     <LinearLayout
+        android:id="@+id/d12_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -172,6 +191,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/d12_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -180,12 +200,16 @@
 
 
         <TextView
+            android:id="@+id/d12_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="D12"
             />
+
+
         <Button
+            android:id="@+id/d12_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -197,6 +221,7 @@
 
 
     <LinearLayout
+        android:id="@+id/d20_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -204,6 +229,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/d20_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -212,12 +238,16 @@
 
 
         <TextView
+            android:id="@+id/d20_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="D20"
             />
+
+
         <Button
+            android:id="@+id/d20_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -231,17 +261,24 @@
 
 
     <Button
+        android:id="@+id/rollAllButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/rollAllButton"/>
 
+    <Button
+        android:id="@+id/DeleteHistoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteHistoryButton"
+        />
 
-        <TextView
-            android:id="@+id/rollOutput"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/outputBox"
-            />
+    <TextView
+        android:id="@+id/rollOutput"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/outputBox"
+        />
 
 
 

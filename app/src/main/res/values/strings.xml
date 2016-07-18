@@ -11,8 +11,10 @@
 
     <string name = "rollButton">Roll</string>
     <string name="numDiceHint">#</string>
-    <string name="outputBox">roll total</string>
+    <string name="outputBox">roll history</string>
     <string name="rollAllButton">Roll All</string>
+
+    <string name="deleteHistoryButton">Delete History</string>
 
 
 </resources>

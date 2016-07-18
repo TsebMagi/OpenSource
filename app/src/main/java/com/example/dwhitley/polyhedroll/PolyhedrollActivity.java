@@ -8,6 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class PolyhedrollActivity extends AppCompatActivity {
 
@@ -47,5 +50,10 @@ public class PolyhedrollActivity extends AppCompatActivity {
 
     public void rollDice(View view){
         int diceResult;
+        String input;
+        TextView output = (TextView) view.findViewById(R.id.rollOutput);
+        TextView d4Num = (TextView) view.findViewById(R.id.d4_Num);
+
+
     }
 }
