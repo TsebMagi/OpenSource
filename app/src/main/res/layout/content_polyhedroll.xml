@@ -31,14 +31,13 @@
         android:id="@+id/d4_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/d4_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:inputType="number"
             android:hint="@string/numDiceHint"
             />
 
@@ -46,14 +45,12 @@
             android:id="@+id/d4_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D4"
             />
         <Button
             android:id="@+id/d4_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/rollButton"
             android:onClick="rollDice"
             />
@@ -75,7 +72,7 @@
             android:id="@+id/d6_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:inputType="number"
             android:hint="@string/numDiceHint"
             />
 
@@ -84,14 +81,12 @@
             android:id="@+id/d6_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D6"
             />
         <Button
             android:id="@+id/d6_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/rollButton"
             android:onClick="rollDice"
             />
@@ -113,7 +108,7 @@
             android:id="@+id/d8_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:inputType="number"
             android:hint="@string/numDiceHint"
             />
 
@@ -122,14 +117,12 @@
             android:id="@+id/d8_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D8"
             />
         <Button
             android:id="@+id/d8_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/rollButton"
             android:onClick="rollDice"
             />
@@ -149,7 +142,6 @@
         android:id="@+id/d10_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
 
         android:orientation="horizontal">
 
@@ -157,7 +149,7 @@
             android:id="@+id/d10_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:inputType="number"
             android:hint="@string/numDiceHint"
             />
 
@@ -166,14 +158,12 @@
             android:id="@+id/d10_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D10"
             />
         <Button
             android:id="@+id/d10_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/rollButton"
             android:onClick="rollDice"
             />
@@ -194,7 +184,7 @@
             android:id="@+id/d12_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:inputType="number"
             android:hint="@string/numDiceHint"
             />
 
@@ -203,7 +193,6 @@
             android:id="@+id/d12_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D12"
             />
 
@@ -212,7 +201,6 @@
             android:id="@+id/d12_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/rollButton"
             android:onClick="rollDice"
             />
@@ -232,7 +220,7 @@
             android:id="@+id/d20_Num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:inputType="number"
             android:hint="@string/numDiceHint"
             />
 
@@ -241,7 +229,6 @@
             android:id="@+id/d20_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="D20"
             />
 
@@ -250,7 +237,6 @@
             android:id="@+id/d20_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/rollButton"
             android:onClick="rollDice"
             />
