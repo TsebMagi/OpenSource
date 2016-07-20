@@ -13,9 +13,8 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class PolyhedrollActivity extends AppCompatActivity {
-
-    public int numDice;
-    public int diceSides;
+    final int numDice = 6;
+    final int[] diceLookUp = {4,6,8,10,12,20};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +48,38 @@ public class PolyhedrollActivity extends AppCompatActivity {
     }
 
     public void rollDice(View view){
-        int diceResult;
-        String input;
+
+        //setup an array to old the input boxes from the GUI
+        TextView[] diceInput;
+        diceInput = new TextView[numDice];
+
+        //array to hold the converted values captured from the GUI
+        int[] diceToRoll;
+        diceToRoll = new int[numDice];
+
+        //setup the output variable
         TextView output = (TextView) view.findViewById(R.id.rollOutput);
-        TextView d4Num = (TextView) view.findViewById(R.id.d4_Num);
+
+        //initialize the array.
+        diceInput[0] = (TextView)  view.findViewById(R.id.d4_Num);
+        diceInput[1] = (TextView) view.findViewById(R.id.d6_Num);
+        diceInput[2] = (TextView) view.findViewById(R.id.d8_Num);
+        diceInput[3] = (TextView) view.findViewById(R.id.d10_Num);
+        diceInput[4] = (TextView) view.findViewById(R.id.d12_Num);
+        diceInput[5] = (TextView) view.findViewById(R.id.d20_Num);
+
+        for(int i = 0; i < numDice; ++i) {
+            if(diceInput[i] != null) {
+                diceToRoll[i] = Integer.getInteger(diceInput[i].toString());
+                diceInput[i].setText("");
+            }
+            else
+                diceToRoll[i] = 0;
+        }
+
+        for(int i = 0; i< numDice; ++i) {
+            output.append("hi");
+        }
 
 
     }

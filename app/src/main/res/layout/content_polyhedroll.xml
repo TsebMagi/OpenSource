@@ -14,6 +14,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:baselineAligned="false"
         android:id="@+id/diceOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,13 +26,16 @@
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
     <LinearLayout
         android:id="@+id/d4_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/d4_Num"
@@ -45,17 +49,8 @@
             android:id="@+id/d4_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D4"
+            android:text="@string/d4"
             />
-        <Button
-            android:id="@+id/d4_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rollButton"
-            android:onClick="rollDice"
-            />
-
-
 
     </LinearLayout>
 
@@ -64,9 +59,9 @@
         android:id="@+id/d6_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/d6_Num"
@@ -81,14 +76,7 @@
             android:id="@+id/d6_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D6"
-            />
-        <Button
-            android:id="@+id/d6_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rollButton"
-            android:onClick="rollDice"
+            android:text="@string/d6"
             />
 
 
@@ -100,9 +88,9 @@
         android:id="@+id/d8_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/d8_Num"
@@ -117,14 +105,7 @@
             android:id="@+id/d8_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D8"
-            />
-        <Button
-            android:id="@+id/d8_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rollButton"
-            android:onClick="rollDice"
+            android:text="@string/d8"
             />
 
     </LinearLayout>
@@ -142,8 +123,9 @@
         android:id="@+id/d10_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/d10_Num"
@@ -158,14 +140,7 @@
             android:id="@+id/d10_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D10"
-            />
-        <Button
-            android:id="@+id/d10_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rollButton"
-            android:onClick="rollDice"
+            android:text="@string/d10"
             />
 
 
@@ -176,9 +151,9 @@
         android:id="@+id/d12_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/d12_Num"
@@ -193,17 +168,9 @@
             android:id="@+id/d12_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D12"
+            android:text="@string/d12"
             />
 
-
-        <Button
-            android:id="@+id/d12_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rollButton"
-            android:onClick="rollDice"
-            />
 
     </LinearLayout>
 
@@ -212,9 +179,9 @@
         android:id="@+id/d20_LinearBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/d20_Num"
@@ -229,17 +196,10 @@
             android:id="@+id/d20_Label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D20"
+            android:text="@string/d20"
             />
 
 
-        <Button
-            android:id="@+id/d20_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rollButton"
-            android:onClick="rollDice"
-            />
 
     </LinearLayout>
     </LinearLayout>
@@ -247,10 +207,12 @@
 
 
     <Button
-        android:id="@+id/rollAllButton"
+        android:id="@+id/rollButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/rollAllButton"/>
+        android:text="@string/rollAllButton"
+        android:onClick="rollDice"
+        />
 
     <Button
         android:id="@+id/DeleteHistoryButton"
