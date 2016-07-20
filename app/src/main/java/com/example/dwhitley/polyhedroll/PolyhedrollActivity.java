@@ -1,6 +1,7 @@
 package com.example.dwhitley.polyhedroll;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +10,15 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.Random;
+
 public class PolyhedrollActivity extends AppCompatActivity {
     final int numDice = 6;
-    final int[] diceLookUp = {4,6,8,10,12,20};
+    final int[] diceLookUp = {4, 6, 8, 10, 12, 20};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +51,7 @@ public class PolyhedrollActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void rollDice(View view){
+    public void rollDice(View v) {
 
         //setup an array to old the input boxes from the GUI
         TextView[] diceInput;
@@ -58,29 +62,58 @@ public class PolyhedrollActivity extends AppCompatActivity {
         diceToRoll = new int[numDice];
 
         //setup the output variable
-        TextView output = (TextView) view.findViewById(R.id.rollOutput);
+        TextView output;
+        output = (TextView) this.findViewById(R.id.rollOutput);
 
         //initialize the array.
-        diceInput[0] = (TextView)  view.findViewById(R.id.d4_Num);
-        diceInput[1] = (TextView) view.findViewById(R.id.d6_Num);
-        diceInput[2] = (TextView) view.findViewById(R.id.d8_Num);
-        diceInput[3] = (TextView) view.findViewById(R.id.d10_Num);
-        diceInput[4] = (TextView) view.findViewById(R.id.d12_Num);
-        diceInput[5] = (TextView) view.findViewById(R.id.d20_Num);
+        diceInput[0] = (TextView) this.findViewById(R.id.d4_Num);
+        diceInput[1] = (TextView) this.findViewById(R.id.d6_Num);
+        diceInput[2] = (TextView) this.findViewById(R.id.d8_Num);
+        diceInput[3] = (TextView) this.findViewById(R.id.d10_Num);
+        diceInput[4] = (TextView) this.findViewById(R.id.d12_Num);
+        diceInput[5] = (TextView) this.findViewById(R.id.d20_Num);
 
-        for(int i = 0; i < numDice; ++i) {
-            if(diceInput[i] != null) {
-                diceToRoll[i] = Integer.getInteger(diceInput[i].toString());
-                diceInput[i].setText("");
+        for (int i = 0; i < numDice; ++i) {
+            {
+                String toConvert = diceInput[i].getText().toString();
+                try{
+                    diceToRoll[i] = Integer.parseInt(toConvert);
+                    diceInput[i].setText("");
+                }
+                catch(NumberFormatException gotIt) {
+                    diceToRoll[i] = 0;
+                }
+                if(diceToRoll[i] > 0)
+                    diceRoll(diceLookUp[i],diceToRoll[i],output);
             }
+
+
+        }
+    }
+
+
+    //calculate and output the dice results.
+    private void diceRoll(int diceSides, int numToRoll, TextView output) {
+        int total = 0;
+        int rand;
+        Random randGen = new Random(SystemClock.currentThreadTimeMillis());
+
+
+        output.append("D"+diceSides +"'s" +" Rolled: ");
+        for (int i = 0; i < numToRoll; ++i) {
+            rand = (((Math.abs(randGen.nextInt()))%diceSides) +1);
+            total += rand;
+            if(i == (numToRoll-1))
+            output.append("" + rand + "\n");
             else
-                diceToRoll[i] = 0;
+                output.append(rand + ", ");
         }
 
-        for(int i = 0; i< numDice; ++i) {
-            output.append("hi");
-        }
+        output.append("Total for D"+diceSides+"'s: "+total + "\n");
+    }
 
-
+    public void clearOutput(View v) {
+        TextView toClear = (TextView) this.findViewById(R.id.rollOutput);
+        toClear.setText("");
     }
 }
