@@ -99,7 +99,7 @@ public class PolyhedrollActivity extends AppCompatActivity {
         Random randGen = new Random(SystemClock.currentThreadTimeMillis());
 
 
-        output.append("D"+diceSides +"'s" +" Rolled: ");
+        output.append(numToRoll +" D"+diceSides +"'s" +" Rolled:\n");
         for (int i = 0; i < numToRoll; ++i) {
             rand = (((Math.abs(randGen.nextInt()))%diceSides) +1);
             total += rand;
