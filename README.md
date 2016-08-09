@@ -8,3 +8,5 @@ The current build supports rolling the traditional set of polyhedrol die (D4, D6
 The output displays the idividual rolls as well as the totall rolled for each type of die.
 
 Future development includes adding the ability to roll customized die that can be defined by the user.
+
+To install download the pollyhedroll.apk file to your android device and open it to start the android installer.
